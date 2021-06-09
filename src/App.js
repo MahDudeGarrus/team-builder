@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
+import NewSquadeMate from './components/NewSquadeMate'
 
 const initialFormVal = {
   firstname: '',
@@ -29,11 +30,13 @@ const submitForm = () => {
     species: formVal.species,
     bio: formVal.bio.trim,
   }
+  setMeBuddies([...formVal, newSquadmate])
 }
 
   return (
     <div className="App">
       <Form values={formVal} update={updateForm} submit={submitForm}/>
+      <NewSquadeMate meBuddies={meBuddies}/>
 
     </div>
   );

@@ -75,7 +75,7 @@ export default function Form(props){
                 </label>               
             </form>        
         
-            <div className='submit'>
+            <div type='submit'>
                 <button>Register Squadmate</button>
             </div>
         </div>
