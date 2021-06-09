@@ -6,7 +6,8 @@ const initialFormVal = {
   firstname: '',
   lastname: '',
   age: '',
-  class: '',
+  warclass: '',
+  species: '',
   bio: '',
 }
 
@@ -17,7 +18,7 @@ const [formVal, setFormVal] = useState(initialFormVal)
 
   return (
     <div className="App">
-      <Form />
+      <Form values={formVal} />
 
     </div>
   );

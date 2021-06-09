@@ -5,9 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* my styles here! */
+  background-image: url('https://www.kolpaper.com/wp-content/uploads/2021/04/HD-Mass-Effect-Wallpaper-3.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  
 }
