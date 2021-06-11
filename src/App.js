@@ -1,7 +1,16 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Form from './components/Form';
 import NewSquadeMate from './components/NewSquadeMate'
+
+const arrayOfBuddies = [{
+  firstname: '',
+  lastname: '',
+  age: '',
+  warclass: '',
+  species: '',
+  bio: '',
+}]
 
 const initialFormVal = {
   firstname: '',
@@ -13,7 +22,7 @@ const initialFormVal = {
 }
 
 export default function App() {
-const [meBuddies, setMeBuddies] = useState([])
+const [meBuddies, setMeBuddies] = useState([arrayOfBuddies])
 
 const [formVal, setFormVal] = useState(initialFormVal)
 
@@ -23,6 +32,7 @@ const updateForm = (inputName, inputValue) => {
 
 const submitForm = () => {
   const newSquadmate = {
+    id: Date.now(),
     firstname: formVal.firstname.trim,
     lastname: formVal.lastname.trim,
     age: formVal.age.trim,
@@ -30,14 +40,17 @@ const submitForm = () => {
     species: formVal.species,
     bio: formVal.bio.trim,
   }
-  setMeBuddies([...formVal, newSquadmate])
+  setMeBuddies([...meBuddies, newSquadmate])
+  setFormVal(initialFormVal)
 }
 
   return (
     <div className="App">
       <Form values={formVal} update={updateForm} submit={submitForm}/>
-      <NewSquadeMate meBuddies={meBuddies}/>
-
+      {meBuddies.map(squadmate => {
+        return(<NewSquadeMate key={initialFormVal.bio} squadmate={formVal}/>)
+      })}
+      
     </div>
   );
 }
