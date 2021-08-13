@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Orbitron', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* my styles here! */
+  background-image: url('https://www.kolpaper.com/wp-content/uploads/2021/04/HD-Mass-Effect-Wallpaper-3.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  /* my styles end*/
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* my styles here! */
+
+
+/* FORM STYLES */
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+h1 {
+  color:lightcyan;
+  font-size: 15vh;
+}
+
+.meFriendsForm {
+  text-align: end;
+  color: lightcyan;
+  font-size: 5vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  margin-right: 40%; 
+}
